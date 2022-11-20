@@ -90,7 +90,7 @@ body {
 }
 
 .sect {
-    min-height: 85vh;
+    min-height: 70vh;
     width: 100vw;
     top: 100px;
     position: relative;
@@ -99,6 +99,7 @@ body {
     box-shadow: 0px 0px 20px 10px var(--bg);
     transition: var(--nav-trans);
     background-color: var(--bg);
+    padding-bottom: 100px;
 }
 
 .sect-content {
@@ -109,8 +110,19 @@ body {
     font-size: 75px;
 }
 
+.sect-h2 {
+    font-size: 30px;
+    line-height: 20px;
+}
+
 .sect-txt {
     font-size: 20px;
+    margin-bottom: 40px;
+}
+
+.sect-li {
+    font-size: 30px;
+    margin-bottom: 20px;
 }
 
 #main {
@@ -128,9 +140,6 @@ body {
 }
 
 #construct {
-    position: relative;
-    left: 50%;
-    transform: translateX(-25%);
     display: grid;
     grid-template-columns: repeat(20, 30px);
     grid-template-rows: repeat(20, 30px);
@@ -138,10 +147,14 @@ body {
     margin: 0 0 100px 0;
 }
 
-#color-pick {
+.centerd {
     position: relative;
     left: 50%;
     transform: translateX(-25%);
+}
+
+#color-pick {
+    position: relative;
     display: grid;
     grid-template-columns: repeat(10, 60px);
     padding: 0 auto;
@@ -216,22 +229,34 @@ body {
     opacity: 0;
     filter: blur(10px);
     transition: all 1s ease;
+    transform: translateY(100%);
 }
 
-#gallery-col-1 > img{
+.hidden-left {
+    transform: translateX(100%);
+}
+
+.hidden-right {
+    transform: translateX(-100%);
+}
+
+#gallery-col-1 > div{
+    transform: translateX(-100%);
     transition-delay: 200ms;
 }
 
-#gallery-col-2 > img, .tr-slow{
+#gallery-col-2 > div{ 
+    transform: translateX(0%);
     transition-delay: 400ms;
 }
 
-#gallery-col-3 > img{
+#gallery-col-3 > div{
+    transform: translateX(100%);
     transition-delay: 600ms;
 }
 
-#s1-content , #s2-content, #s3-content{
-    transform: translateY(100%);
+.tr-slow {
+    transition-delay: 400ms;
 }
 
 @media(prefers-reduced-motion) {
@@ -255,4 +280,16 @@ body {
     filter: brightness(5) drop-shadow(0 0 10px #000);
     transition: filter 500ms ease;
     left: 50%;
+    cursor: pointer;
+}
+
+.pack-images {
+    margin: 40px;
+    display: grid;
+    grid-template-columns: 600px 600px;
+    grid-gap: 40px;
+}
+
+.pack-img {
+    width: 550px;
 }
