@@ -147,3 +147,21 @@ const observer = new IntersectionObserver(entries => {
 
 const hiddenEl = document.querySelectorAll('.hidden')
 hiddenEl.forEach(el => observer.observe(el));
+
+//-----------likes-----------------
+
+const likes = document.querySelectorAll('.like')
+
+likes.forEach(like => {
+    like.clickedd = false;
+
+    like.onclick = ()=> {
+        if(like.clickedd) {
+            like.style.filter = "brightness(5) drop-shadow(0 0 10px #000)"
+            like.clickedd = false
+        } else {
+            like.style.filter = "brightness(1) drop-shadow(0 0 10px #000)"
+            like.clickedd = true
+        }
+    }
+})

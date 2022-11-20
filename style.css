@@ -245,3 +245,14 @@ body {
     transform: translateY(0) !important;
     opacity: 1 !important;
 }
+
+.like {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    transform: translate(-50%, -50%);
+    bottom:0;
+    filter: brightness(5) drop-shadow(0 0 10px #000);
+    transition: filter 500ms ease;
+    left: 50%;
+}
